@@ -1,0 +1,531 @@
+<!-- <p>home-page works!</p> -->
+<app-navigation></app-navigation>
+ <a [routerLink]="'/user'"> User</a>
+<a [routerLink]="'/admin'"> Admin</a>
+<a [routerLink]="'/singleMovieView'"> singleMovieView</a> 
+
+<!-- carousel starts here -->
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../assets/images/slider/image1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/images/slider/image2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/images/slider/image3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- carousel ends here -->
+  <app-movieslist></app-movieslist>
+
+  
+
+  <div class="footer  py-5  ">
+    <div class="container">
+      <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-one">
+          <img src="http://velikorodnov.com/html/autotrader/images/logo.png" alt="Logo" style="width:120px;">
+        
+          <p class="pt-4">Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <div class="social-icons"> 
+                 <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                 <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>	
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-two">
+          <h5>Information </h5>
+          <ul class="list-unstyled">
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="contact.html">Locations</a></li>
+                    <li><a href="about.html">Testimonials</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                    <li><a href="about.html">Partners</a></li>
+                  </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-three">
+          <h5>Helpful Links </h5>
+          <ul class="list-unstyled">
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="contact.html">Locations</a></li>
+                    <li><a href="about.html">Testimonials</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                    <li><a href="about.html">Partners</a></li>
+                  </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-four">
+          <h5>Helpful Links </h5>
+          <ul class="list-unstyled">
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="contact.html">Locations</a></li>
+                    <li><a href="about.html">Testimonials</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                    <li><a href="about.html">Partners</a></li>
+                  </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright bglight1 border pt-2">
+      <div class="container">
+          <div class="row justify-content-md-center">
+              <p> © 2018 xyz Software Pvt. Ltd. </p>
+          </div>
+      </div>
+
+  
+  <!-- paddig bootom - 1rem = py-3 -->
+  <footer class="footer mt-auto py-3 text-center bg-dark">
+    <div class="container">
+      <span class="text-muted1" style="color:white">All rights reseved by ICSD Tech Labs.</span>
+    </div>
+  </footer>
+<!-- footer finish here -->
+
+
+  <div class="py-5 bg-light mt-5">
+    <div class="container">
+    <div class="row pb-4 text-center">
+        <div class="col-md-12">
+            <h2>Upcoming & Latest cars</h2>
+            <p> Pre-booked lessons, on-call lessons are Not refundable unless cancelled more than 24 hours.</p>
+        </div>
+    </div>
+	<div class="row text-center ">
+		<div class="col-md-3  border border-info py-4">
+        
+      <div class="bg-info">
+		        <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mh-auto mw-100" alt="">
+          </div>
+		    
+		        <h4> Mahindra XUV500 2018</h4>
+		    
+		    
+		        <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+		    
+		    
+		        <small>Launch Date: 15 Apr 2018 </small>
+		        
+		    
+		    <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3 box border border-info py-4">
+		   
+		        <img src="https://img0.gaadicdn.com/images/car-images/265x110/Tata/Tata-Nexon/047.jpg" class="mh-auto mw-100" alt="">
+		        <h4> Mahindra XUV500 2018</h4>
+		   
+		        <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+		   
+		   
+		        <small>Launch Date: 15 Apr 2018 </small>
+		        
+		   
+		    <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3 box border border-info py-4">
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Tata/Tata-Nexon/047.jpg" class="mh-auto mw-100" alt="">
+      <h4> Mahindra XUV500 2018</h4>
+ 
+      <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+ 
+ 
+      <small>Launch Date: 15 Apr 2018 </small>
+      
+ 
+  <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3  border border-info py-4">
+		    <div class="box-carimage">
+		        <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mh-auto mw-100" alt="">
+		    </div>
+		    <div class="box-cartitle">
+		        <h4> Mahindra XUV500 2018</h4>
+		    </div>
+		    <div class="box-carprice">
+		        <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+		    </div>
+		    <div class="box-date pb-3">
+		        <small>Launch Date: 15 Apr 2018 </small>
+		        
+		    </div>
+		    <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+	</div>
+	<div class="row text-center pt-4">
+	    <div class="col-md-12">
+	        <button type="button" class="btn btn-danger">View All Upcoming Cars</button>
+	    </div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+<div class="popular py-5">
+    <div class="container">
+    <div class="row pb-4 text-center  text-info">
+        <div class="col-md-12">
+            <h2>Popular car in India</h2>
+            <p> Pre-booked lessons, on-call lessons are Not refundable unless cancelled more than 24 hours.</p>
+        </div>
+    </div>
+	<div class="row text-center border border-dark my-5">
+		<div class="col-md-3  border py-4">
+		    
+		        <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mw-100 h-auto"  alt="">
+		    
+		    
+		        <h4> Mahindra XUV500 201885</h4>
+		    
+		    
+		        <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+		    
+		    
+		        <small>Launch Date: 15 Apr 2018 </small>
+		        
+		    
+		    <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3 box border py-4">
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mw-100 h-auto"  alt="">
+		    
+		    
+      <h4> Mahindra XUV500 201885</h4>
+  
+  
+      <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+  
+  
+      <small>Launch Date: 15 Apr 2018 </small>
+      
+  
+      <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3  border py-4">
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mw-100 h-auto"  alt="">
+		    
+		    
+      <h4> Mahindra XUV500 2018890</h4>
+  
+  
+      <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+  
+  
+      <small>Launch Date: 15 Apr 2018 </small>
+      
+  
+      <button type="button" class="btn btn-outline-danger">Check Price</button>
+		</div>
+		<div class="col-md-3 box border py-4">
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="mw-100 h-auto"  alt="">
+		    
+		    
+      <h4> Mahindra XUV500 201885</h4>
+  
+  
+      <h6><i class="fa fa-inr"></i>14.0 Lac*</h6>
+  
+  
+      <small>Launch Date: 15 Apr 2018 </small>
+      
+  
+      <button type="button" class="btn btn-outline-danger">Check Price</button>		</div>
+	</div>
+	<div class="row text-center pt-4">
+	    <div class="col-md-12">
+	        <button type="button" class="btn btn-danger">View All Upcoming Cars</button>
+	    </div>
+	</div>
+</div>
+</div>
+
+<!-- ASK THE QUESION DIV FULL WIDTH ON PAGE -->
+<div class="py-5 bg-warning">
+<div class="py-5">
+	<div class="row bg-light py-5  text-center">
+		<div class="col-md-12 ">
+		    <i class="fa fa-headphones fa-3x text-primary"></i>
+		    <h3>How can we help you?</h3>
+		    <p>Fusce imper diet odio sit amet erat conse quat, eget eleme nmper diet odio sit amet erat atege tpurc surus lorem iandit vehi culas.</p>
+		    <button type="button" class="btn btn-danger">Ask the Question</button>
+		</div>
+	</div>
+</div>
+</div>
+<div class="location py-5">
+    <div class="container">
+    <div class="row pb-4 text-center">
+        <div class="col-md-12">
+            <h2>Find Used Cars in </h2>
+            <p> Pre-booked lessons, on-call lessons are Not refundable unless cancelled more than 24 hours.</p>
+        </div>
+    </div>
+	
+	<div class="row text-center">
+		<div class="col-md-2  border py-4">
+		   
+		  <button type="button" class="btn bg-danger"><i class="fa fa-map-marker fa-1x "></i> New Delhi</button>
+		   
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x "></i> Banglore</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn bg-secondary text-white"><i class="fa fa-map-marker fa-1x "></i> Jaipur</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x "></i> Chennai</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x "></i> Mumbai</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x "></i> Banglore</button>
+		</div>
+	
+		
+  </div>
+  
+	<div class="row text-center">
+		<div class="col-md-2  border py-4">
+		   
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x text-info "></i> New Delhi</button>
+		   
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa  fa-spinner fa-spin text-primary"></i> Banglore</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-spinner fa-spin fa-3x fa-fw text-warning"></i><i class="fa fa-map-marker fa-1x "></i> Jaipur</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw text-danger"></i><i class="fa fa-map-marker fa-1x "></i> Chennai</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><i class="fa fa-map-marker fa-1x "></i> Mumbai</button>
+		</div>
+		<div class="col-md-2  border py-4">
+		  <button type="button" class="btn btn-light"><i class="fa fa-map-marker fa-1x "></i> Banglore</button>
+		</div>
+	
+		
+  </div>
+  <!--
+  Button rounded pill and shadow
+  -->
+	<div class="row text-center pt-4">
+	    <div class="col-md-12">
+          <button type="button" class="btn shadow-lg rounded bg-danger text-white rounded-pill">View All Upcoming Cars123</button>
+          <button type="button" class="btn btn-primary"><i class="fa fa-check bg-dark"></i> Primary</button>
+          <a class="btn btn-danger rounded-pill" href="#">
+            <i class="fa fa-trash-o fa-lg bg-primary "></i> Delete</a>
+	    </div>
+	</div>
+</div>
+</div>
+<div class="brand-search py-5">
+    <div class="container">
+    <div class="row pb-4 text-center">
+        <div class="col-md-12">
+            <h2>Search car by Brand</h2>
+            <p> Pre-booked lessons, on-call lessons are Not refundable unless cancelled more than 24 hours.</p>
+        </div>
+    </div>
+	<div class="row text-center">
+    <div class="col-md-2  border py-4">
+          
+              <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+          
+          
+              <a href="#"><h6> Mahindra </h6></a>
+          
+          
+        
+    </div>
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+
+
+      <a href="#"><h6> Mahindra </h6></a>
+
+
+
+  </div>
+  <div class="col-md-2  border py-4">
+          
+    <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+
+
+    <a href="#"><h6> Mahindra </h6></a>
+
+
+
+  </div>
+  <div class="col-md-2  border py-4">
+          
+    <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+
+
+    <a href="#"><h6> Mahindra </h6></a>
+
+
+
+  </div>
+  <div class="col-md-2  border py-4">
+          
+    <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+
+
+    <a href="#"><h6> Mahindra </h6></a>
+
+
+
+  </div>
+  <div class="col-md-2  border py-4">
+          
+    <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+
+
+    <a href="#"><h6> Mahindra </h6></a>
+
+
+
+  </div>
+
+		
+	</div>
+	<div class="row text-center">
+	  <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+    <div class="col-md-2  border py-4">
+          
+      <img src="https://img0.gaadicdn.com/images/car-images/265x110/Mahindra/Mahindra-XUV500-2018/6334/047.jpg" class="img-fluid mw-100 h-auto" alt="">
+  
+  
+      <a href="#"><h6> Mahindra </h6></a>
+  
+  
+  
+    </div>
+    
+		
+	</div>
+	<div class="row text-center pt-4">
+	    <div class="col-md-12">
+	        <button type="button" class="btn btn-danger">View All Upcoming Cars</button>
+	    </div>
+	</div>
+</div>
+</div>
+<div class="offer my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 py-3 border">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <img src="http://klbtheme.com/froday/wp-content/uploads/2018/02/tablet.png" class="img-fluid mw-100 h-auto" >
+                    </div>
+                    <div class="col-md-9">
+                        <h5>Deals & Coupons</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aspernatur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 border">
+                <div class="row">
+                    <div class="col-md-3 mt-2">
+                        <img src="http://klbtheme.com/froday/wp-content/uploads/2018/02/online-shop-6.png"  class="img-fluid mw-100 h-auto">
+                    </div>
+                    <div class="col-md-9">
+                        <h5>Find Best Offers</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aspernatur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 border">
+                <div class="row">
+                    <div class="col-md-3 mt-2">
+                        <img src="http://klbtheme.com/froday/wp-content/uploads/2018/02/money.png"  class="img-fluid mw-100 h-auto ">
+                    </div>
+                    <div class="col-md-9">
+                        <h5>Save Money</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aspernatur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
