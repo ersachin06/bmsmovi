@@ -11,12 +11,20 @@
             <div class="row">
             <ng-container *ngFor="let i of arrTtlGoldSeats">
               
-                
-                <div class="col-md-3">
-                  <a (click)="Seat(i)" id="'G'+i" title="['G'+i]">
+            
+              <div class="col-md-3">
+                <!-- ** <div id="location_{{i}}">write something which you want like {{i}}  
+                    this is also Working 
+                </div> -->
+                <a (click)="Seat(i)"  [title]="'G'+i">
+                  G{{i}}  <img [src]="seatImgUrl" [name]="'G'+i" [attr.id]="'G'+i" alt="">
+                </a>
+              </div>
+                <!-- <div class="col-md-3">
+                  <a (click)="Seat(i)" id="'G'+i+1" title="['G'+i+1]">
                     G{{i}}  <img src="../assets/img/bseat.png" alt="">
                   </a>
-                </div>
+                </div> -->
               
             </ng-container>   
           </div>
