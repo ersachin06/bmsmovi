@@ -9,16 +9,16 @@
           <div class="col-md-6">
             <h6>Select Seats </h6>
             <div class="row">
-            <ng-container *ngFor="let i of arrTtlGoldSeats">
+            <ng-container *ngFor="let i of arrTtlGoldSeats" >
               
             
               <div class="col-md-3">
                 <!-- ** <div id="location_{{i}}">write something which you want like {{i}}  
                     this is also Working 
                 </div> -->
-                <a (click)="Seat(i)"  [title]="'G'+i">
-                  G{{i}}  <img [src]="seatImgUrl" [name]="'G'+i" [attr.id]="'G'+i" alt="">
-                </a>
+                <!-- <a (click)="Seat(i)"  [title]="'G'+i"> -->
+                  G{{i}}  <img [src]="seatImgUrl" #attendee (click)="Seat(i,$event)" [name]="'G'+i"  [attr.id]="'G'+i" alt="">
+                <!-- </a> -->
               </div>
                 <!-- <div class="col-md-3">
                   <a (click)="Seat(i)" id="'G'+i+1" title="['G'+i+1]">
@@ -32,12 +32,12 @@
             <ng-container *ngFor="let i of arrTtlSilverSeats">
               
                 
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                   <a (click)="Seat('S'+i)" id="'S'+i" title="['S'+i]">
                     S{{i}}  <img src="../assets/img/bseat.png" alt="">
                   </a>
                 </div>
-              
+               -->
             </ng-container>   
           </div>
               <div class="row">
@@ -45,9 +45,9 @@
                 <ul>
                   <!-- ROW 3 START -->
                   <li>
-                    <a title="[A3]" (click)="Seat('A3')" id="A3">
+                    <!-- <a title="[A3]" (click)="Seat('A3')" id="A3">
                       <img src="../assets/img/bseat.png" alt="">
-                    </a>
+                    </a> -->
                   </li>
                   
                 </ul>
@@ -57,16 +57,16 @@
                 <ul>
                   <!-- ROW 4 START  -->
                   <li>
-                    <a title="[A4]" (click)="Seat('A4')" id="A4">
+                    <!-- <a title="[A4]" (click)="Seat('A4')" id="A4">
                       <img src="../assets/img/bseat.png" alt="">
-                    </a>
+                    </a> -->
                   </li>
                   
                 </ul>
 
               </div> 
              
-            <div *ngIf="alert"class="alert alert-danger ">You can buy only 4 seats in one time </div>
+            <div *ngIf="alert"class="alert alert-danger ">You can buy only {{maxSeats}} seats in one time </div>
           </div>
           <div class="col-md-6 ">
           <div class="seat_plan">
@@ -81,8 +81,8 @@
               <tbody>
                 <tr *ngFor="let s of showSeatList">
                   <td>{{s.seatNo}}</td>
-                  <td>{{s.fare}}</td>
-                  <td>{{s.seatClass}}</td>
+                  <td>{{s.price}}</td>
+                  <td>{{s.seatType}}</td>
                 </tr>
               </tbody>
             </table>

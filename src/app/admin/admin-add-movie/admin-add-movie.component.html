@@ -1,0 +1,220 @@
+
+<!-- {
+    "movieId": 1,
+    "title": "ddlj",
+    "description": "desc",
+    "releaseYear": "2020-12-04T06:10:20.821+00:00",
+    "language": {
+        "language_id": 1,
+        "name": "English",
+        "last_update": "2020-12-03T14:34:06"
+    },
+    "rating": 5,
+    "lastUpdate": "2020-12-04T11:40:20.8319291",
+    "startDate": "2020-12-04T11:40:20.8319291",
+    "endDate": "2020-12-04T11:40:20.8319291",
+    "lastUpdateTemp": "2020-12-04T06:10:20.821+00:00",
+    "slot912": "slot912",
+    "slot1215": null,
+    "slot1518": null,
+    "slot1821": null,
+    "goldPrice": 500,
+    "silverPrice": 250,
+    "actors": [
+        {
+            "actorId": 1,
+            "firstName": "rohan",
+            "lastUpdate": "2020-12-03T21:39:23",
+            "lastName": "kumar"
+        },
+        {
+            "actorId": 2,
+            "firstName": "sohan",
+            "lastUpdate": "2020-12-03T21:40:09",
+            "lastName": "kumar"
+        },
+        {
+            "actorId": 3,
+            "firstName": "mohan",
+            "lastUpdate": "2020-12-03T21:41:37",
+            "lastName": "kumar"
+        }
+    ],
+    "originalLanguage": true
+} -->
+<p>admin-add-movie works!</p>
+<button class="btn btn-primary" (click)="addMovie()">addmovie hardcode calling</button>
+<div class="container">
+    <form class="form-horizontal" action="../AddMovie" method="get" role="form">
+        <h2 class="text-info">Add Movie Form</h2>
+        <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="movieId" class="font-weight-bold text-success">Movie id</label>
+            
+                <input type="number"  placeholder="Movie id" formControlName="movieId"  class="form-control" value="<%=movieId%>" readonly autofocus>
+                <span class="text-muted">it is auto generated </span>
+            
+        </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label for="movieName" class="text-info" >Movie Name</label>
+            
+                <input type="text" id="txtMovieName" name="txtMovieName" placeholder="Movie Name" class="form-control" autofocus>
+                <span class="text-muted">Movie Name , eg.: Mission Impossible </span>
+            
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="stars" class="text-info">Stars</label>
+                
+                    <select id="ddlStars" name="ddlStars" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        
+                    </select>
+                
+            </div>
+        </div>
+   
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="birthDate" class="text-info">Start Date</label>
+                
+                    <input type="date" id="startDate" name="startDate" class="form-control">
+                
+            </div>
+            <div class="form-group col-md-6">
+                <label for="birthDate" class="text-info">End Date</label>
+                
+                    <input type="date" id="endDate" name="endDate" class="form-control">
+                
+            </div>
+        </div>
+          
+        
+        <div class="form-row">
+            <div class="form-group col-md-2" >
+                <label class="text-info">Slot Available</label>
+            </div> 
+                    <div class="form-group col-md-2" >
+                        <label>
+                            <input type="checkbox" id="slot912" name="slot" value="slot912">9-12
+                        </label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>
+                             <input type="checkbox" id="slot1215" name="slot" value="slot1215">12-15
+                        </label>
+                    </div>
+                
+                
+                    <div class="form-group col-md-2">
+                        <label>
+                            <input type="checkbox" id="slot1518" name="slot" value="slot1518">15-18
+                        </label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>
+                             <input type="checkbox" id="slot1821" name="slot" value="slot1821">18-21
+                        </label>
+                    </div>
+                
+            
+            
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="goldPrice" class="text-info">Gold Ticket Price in rs</label>
+                
+                <input type="number" id="txtGoldPrice" name="txtGoldPrice" placeholder="Gold Ticket Price" class="form-control" autofocus>
+                    <span class="text-muted">Gold ticket price : ex 500 </span>
+                
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="goldPrice" class="text-info">Silver Ticket Price in rs</label>
+                
+                <input type="number" id="txtSilverPrice" name="txtSilverPrice" placeholder="Silver Ticket Price"  class="form-control" autofocus>
+                <span class="text-muted">Silver ticket price : ex 500 </span>
+                
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="movieName" class="text-info">Language </label>
+                
+                <input type="text" id="txtLanguage" name="txtLanguage" placeholder="language" class="form-control" autofocus>
+                <span class="text-muted">English,Punjabi</span>
+                
+            </div>
+
+        </div>
+   
+   
+        <div class="form-row">
+     
+        <div class="form-group col-md-12">
+            <label for="movieName" class="text-info">Image Name</label>
+            
+             <input type="text" id="txtImageName" name="txtImageName" placeholder="image Name" class="form-control" autofocus>
+             <span class="text-muted">a1.jpg </span>
+            
+        </div>
+        </div>
+
+        
+        
+      
+    <!--     <div class="form-group">
+            <label class="control-label col-sm-3">Gender</label>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" id="femaleRadio" value="Female">Female
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" id="maleRadio" value="Male">Male
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" id="uncknownRadio" value="Unknown">Unknown
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
+      <!-- 
+        <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">I accept <a href="#">terms</a>
+                    </label>
+                </div>
+            </div>
+        </div> --> <!-- /.form-group -->
+        <div class="form-row">
+            <div class="form-group col-md-3">
+            
+                <button type="submit" class="btn btn-primary ">add movie</button>               
+            
+            </div>
+            <div class="form-group col-md-3">
+                <input type="submit" class="btn btn-warning" value="submit" />
+            </div>
+        </div>
+
+        
+    </form> <!-- /form -->
+</div> <!-- ./container -->
+

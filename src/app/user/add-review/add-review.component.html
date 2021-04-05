@@ -1,0 +1,51 @@
+<p>add-review works!</p>
+<!-- @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int reviewId;
+	
+	@ManyToOne
+	@JoinColumn(name="customer_id")
+	private Customer customer;
+	
+	private String reviewDesc;
+	private int star;
+	
+	@ManyToOne
+	@JoinColumn(name="movie_id")
+	private Movie movie;
+	
+	private LocalDateTime dateOfReview; -->
+<div class="container">
+    <form [formGroup]="frmGrp" (ngSubmit)="frmSub()">
+        <div class="form-group">
+            <p class="alert alert-success">Enter review id</p>
+            <input type="text" placeholder="enter review id" class="form-control" formControlName="reviewId"/>
+        </div>
+        <div class="form-group">
+            <p class="alert alert-success">Enter customer id</p>
+            <input type="text" placeholder="enter Customer id" class="form-control" formControlName="customerId"/>
+        </div>
+        <div class="form-group">
+            <p class="alert alert-success">Enter review desc</p>
+            <input type="text" placeholder="enter review Desc" class="form-control" formControlName="reviewDesc"/>
+        </div>
+        <div class="form-group">
+            <p class="alert alert-success">Enter star</p>
+            <input type="text" placeholder="enter star" class="form-control" formControlName="star"/>
+        </div>
+        <div class="form-group">
+            <p class="alert alert-success">Enter movie id</p>
+            <input type="text" placeholder="enter movie id" class="form-control" formControlName="movieId"/>
+        </div>
+
+        <div class="form-group">
+            <p class="alert alert-success">Enter date of review</p>
+            <input type="text" placeholder="enter date of review" class="form-control" formControlName="dateOfReview"/>
+        </div>
+        <div class="form-group">
+            
+            <input type="submit" value="submit" class="btn btn-warning"/>
+        </div>
+    </form>
+
+</div>

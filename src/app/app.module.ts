@@ -10,7 +10,8 @@ import { SingleMovieViewComponent } from './home-page/components/single-movie-vi
 import { FooterComponent } from './home-page/components/footer/footer.component';
 import { SeatsSelectionComponent } from './home-page/components/seats-selection/seats-selection.component';
 
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +20,18 @@ import { SeatsSelectionComponent } from './home-page/components/seats-selection/
     MovieslistComponent,
     SingleMovieViewComponent,
     FooterComponent,
-    SeatsSelectionComponent,
-
+    SeatsSelectionComponent
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
