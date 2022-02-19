@@ -12,6 +12,11 @@ import { SeatsSelectionComponent } from './home-page/components/seats-selection/
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+
+import { StoreModule } from '@ngrx/store';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +25,8 @@ import { HttpClientModule} from '@angular/common/http';
     MovieslistComponent,
     SingleMovieViewComponent,
     FooterComponent,
-    SeatsSelectionComponent
+    SeatsSelectionComponent,
+    
     
     
   ],
@@ -29,7 +35,11 @@ import { HttpClientModule} from '@angular/common/http';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule
+   // StoreModule.forRoot({}, {})
+    // MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

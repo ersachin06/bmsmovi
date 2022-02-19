@@ -4,6 +4,7 @@ import { map } from "rxjs/operators";
 
 //import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,12 @@ export class AdminServiceService {
 
   constructor(  private httpclient:HttpClient, private apiService: ApiService,//private toaster: ToastrService
     ) { }
+
+    getAllMovies()
+    {
+      return this.apiService.get("getAllMovies");
+      
+    }
 
     //http://localhost:8912/movie
   addMovie(credentials) { 

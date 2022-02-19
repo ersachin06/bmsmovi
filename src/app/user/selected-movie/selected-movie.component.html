@@ -14,7 +14,7 @@ movieId : {{movieId}}<br>
                 <h3 class="card-title text-muted">movie title {{movieListDto.title}}</h3>
                 <h6 class="card-subtitle text-muted mb-3">
                     movies categories :
-                    
+
                     </h6>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
@@ -25,7 +25,7 @@ movieId : {{movieId}}<br>
                         <h4 class="text-muted m-t-40 ">Product description</h4>
                         <p>
                             Description: {{movieListDto.description}}
-                            
+
                         </p>
                         <h2 class="m-t-40 text-muted">Gold Ticket Price  {{movieListDto.goldPrice}} rs.
                             <small class="text-success">(36% off)</small>
@@ -39,8 +39,8 @@ movieId : {{movieId}}<br>
                         <button class="btn btn-dark  rounded-pill mr-3" >
                             <i class="fa fa-shopping-cart bg-dark"></i>
                         </button>
-        
-                        <button class="btn btn-primary  rounded-pill" (click)="funBookNow()"> Book Now </button>
+
+
                         <h3 class="mt-4 text-muted ">Key Highlights</h3>
                         <ul class="list-unstyled">
                             <li *ngFor="let cat of categories">
@@ -57,7 +57,7 @@ movieId : {{movieId}}<br>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <h3 class="mt-4 text-muted">General Info</h3>
                         <div class="table-responsive text-muted">
-     
+
                             <table class="table">
                                 <tbody>
                                     <tr>
@@ -78,11 +78,11 @@ movieId : {{movieId}}<br>
                                     </tr>
                                     <tr>
                                         <td>Language</td>
-                                        <td> 
+                                        <td>
                                         {{movieListDto.language.name}}
                                         </td>
                                     </tr>
-     
+
                                     <tr>
                                         <td>Rating</td>
                                         <td> {{movieListDto.rating}} </td>
@@ -99,8 +99,9 @@ movieId : {{movieId}}<br>
                                         <td>Slot 912</td>
                                         <td>
                                             <ng-template [ngIf]="isSlot912">
-                                                {{movieListDto.slot912}}    
-                                            </ng-template> 
+                                                <button class="btn btn-primary  rounded-pill" (click)="funBookNow()"> {{movieListDto.slot912}} </button>
+
+                                            </ng-template>
                                             <ng-template [ngIf]="!isSlot912">
                                                 not available
                                             </ng-template>
@@ -111,21 +112,23 @@ movieId : {{movieId}}<br>
                                         <td>Slot 1215</td>
                                         <td>
                                             <ng-template [ngIf]="isSlot1215">
-                                                {{movieListDto.slot1215}}    
-                                            </ng-template> 
+
+                                                <button class="btn btn-primary  rounded-pill" (click)="funBookNow()"> {{movieListDto.slot1215}} </button>
+                                            </ng-template>
                                             <ng-template [ngIf]="!isSlot1215">
                                                 not available
-                                            </ng-template> 
-                                            
+                                            </ng-template>
+
 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Slot 1518</td>
-                                        <td> 
+                                        <td>
                                             <ng-template [ngIf]="isSlot1518">
-                                                {{movieListDto.slot1518}}    
-                                            </ng-template> 
+
+                                                <button class="btn btn-primary  rounded-pill" (click)="funBookNow()"> {{movieListDto.slot1518}} </button>
+                                            </ng-template>
                                             <ng-template [ngIf]="!isSlot1518">
                                                 not available
                                             </ng-template>
@@ -134,17 +137,18 @@ movieId : {{movieId}}<br>
                                     </tr>
                                     <tr>
                                         <td>Slot 1821</td>
-                                        <td> 
+                                        <td>
                                             <ng-template [ngIf]="isSlot1821">
-                                                {{movieListDto.slot1821}}    
-                                            </ng-template> 
+
+                                                <button class="btn btn-primary  rounded-pill" (click)="funBookNow()"> {{movieListDto.slot1821}} </button>
+                                            </ng-template>
                                             <ng-template [ngIf]="!isSlot1821">
                                                 not available
                                             </ng-template>
 
                                         </td>
                                     </tr>
-                                 
+
                                     <tr>
                                         <td>Gold price</td>
                                         <td> {{movieListDto.goldPrice}}</td>
@@ -154,26 +158,27 @@ movieId : {{movieId}}<br>
                                         <td> {{movieListDto.silverPrice}}</td>
                                     </tr>
                                     <tr>
+                                        <!-- categories -->
                                         <td>Categories</td>
-                                        <td> 
+                                        <td>
                                         <li *ngFor="let cat of categories">
                                                <i class="fa fa-check text-success"></i> {{cat.name}}
                                         </li>
-                                        
+
 
 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Actors:</td>
-                                        <td> 
+                                        <td>
                                             <li *ngFor="let act of movieListDto.actors">
                                                 <i class="fa fa-check text-success"></i> {{act.firstName}}
                                          </li>
-                                        
+
                                         </td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>

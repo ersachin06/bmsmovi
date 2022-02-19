@@ -1,0 +1,86 @@
+<p>admin-disp-movies works!</p>
+<!-- arrMovies -->
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+      
+    <!-- Weight Column -->
+    <ng-container matColumnDef="movieId">
+        <th mat-header-cell *matHeaderCellDef> Movie Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.movieId}} </td>
+      </ng-container>
+      
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="language">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.language.name}} </td>
+    </ng-container>
+
+   
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="releaseYear">
+      <th mat-header-cell *matHeaderCellDef> releaseYear </th>
+      <td mat-cell *matCellDef="let element"> {{element.releaseYear}} </td>
+    </ng-container>
+   
+     
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef> Rating </th>
+        <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+      </ng-container>
+       
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="slot912">
+        <th mat-header-cell *matHeaderCellDef> slot912 </th>
+        <td mat-cell *matCellDef="let element"> {{element.slot912}} </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+
+<!--   
+  
+<table class="table">
+    <tr>
+        <th>Movie Id</th>
+        <th>Title</th>
+        <th>releaseYear</th>
+        <th>language</th>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>slot912</th>
+        <th>slot1215</th>
+        <th>slot1518</th>
+        <th>slot1821</th>
+        <th>goldPrice</th>
+        <th>silverPrice</th>
+        <th>originalLanguage</th>
+        
+    </tr>
+    <tr *ngFor="let movie of arrMovies">
+        <td>{{movie.movieId}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.releaseYear}}</td>
+        <td>{{movie.language.name}}</td>
+        <td>{{movie.startDate}}</td>
+        <td>{{movie.endDate}}</td>
+        <td>{{movie.slot912}}</td>
+        <td>{{movie.slot1215}}</td>
+        <td>{{movie.slot1518}}</td>
+        <td>{{movie.slot1821}}</td>
+        <td>{{movie.goldPrice}}</td>
+        <td>{{movie.silverPrice}}</td>
+        <td>{{movie.originalLanguage}}</td>
+    </tr>
+</table> -->

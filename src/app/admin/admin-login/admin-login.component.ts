@@ -34,7 +34,7 @@ export class AdminLoginComponent implements OnInit {
     //this.authService.attemptAuth(this.loginForm.value);
     let unm=this.loginForm.value['username'];
     let pwd=this.loginForm.value['password'];
-    if(unm==="Admin" && pwd==="Admin")
+    if(unm==="a" && pwd==="a")
     {
       alert("valid user "+ unm+" "+ pwd);
       this.router.navigate  (['admin/admin-home']);

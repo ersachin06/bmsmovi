@@ -7,6 +7,7 @@ import { ViewBookedTicketsComponent } from './view-booked-tickets/view-booked-ti
 import { ViewUsersComponent } from './view-users/view-users.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminAddMovieComponent } from './admin-add-movie/admin-add-movie.component';
+import { AdminDispMoviesComponent } from './admin-disp-movies/admin-disp-movies.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
     {path:'admin-home',component:AdminHomeComponent, children:[
     {path:'view-booked-tickets',component:ViewBookedTicketsComponent},
     {path:'view-users',component:ViewUsersComponent},
-    {path:'add-movie',component:AdminAddMovieComponent}
+    {path:'add-movie',component:AdminAddMovieComponent},
+    {path:'show-movie',component:AdminDispMoviesComponent},
     
   ]},
   {path:'**',component:AdminErrorComponent}

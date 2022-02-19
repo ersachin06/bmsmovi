@@ -13,11 +13,14 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
-
+import { AdminDispMoviesComponent } from './admin-disp-movies/admin-disp-movies.component';
+import {MatTableModule} from '@angular/material/table';
+import {  StoreModule } from '@ngrx/store';
+import {rootReducer} from '../admin/reducers';
 // import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [ViewBookedTicketsComponent, ViewUsersComponent, AdminHomeComponent, AdminLoginComponent, AdminErrorComponent, AdminAddMovieComponent, AdminHeaderComponent, AdminFooterComponent],
+  declarations: [ViewBookedTicketsComponent, ViewUsersComponent, AdminHomeComponent, AdminLoginComponent, AdminErrorComponent, AdminAddMovieComponent, AdminHeaderComponent, AdminFooterComponent, AdminDispMoviesComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,6 +28,10 @@ import { ToastrModule } from 'ngx-toastr';
  //   SharedModule,
     AdminRoutingModule,
     ToastrModule,
+    MatTableModule,
+    
+    //StoreModule.forFeature('admin',rootReducer)
+    StoreModule.forFeature('admin',rootReducer)
     
     
     // BrowserAnimationsModule

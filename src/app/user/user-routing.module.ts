@@ -6,6 +6,7 @@ import { UserHomeComponent } from './user-home/user-home.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { SelectedMovieComponent } from './selected-movie/selected-movie.component';
+import { SeatsSelectionComponent } from './seats-selection/seats-selection.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,9 @@ const routes: Routes = [
     {path:'view-cart',component:ViewCartComponent},
     {path:'book-movie',component:BookMovieComponent},
     {path:'add-review',component:AddReviewComponent},
-    {path:'selected-movie/:mid',component:SelectedMovieComponent}
+    {path:'selected-movie/:mid',component:SelectedMovieComponent},
+    {path:'seats-selection',component:SeatsSelectionComponent}
+    
   ]},  
 ];
 

@@ -10,11 +10,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserServiceService } from './service/user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectedMovieComponent } from './selected-movie/selected-movie.component';
+import { SeatsSelectionComponent } from './seats-selection/seats-selection.component';
 
 
 
 @NgModule({
-  declarations: [BookMovieComponent, ViewTicketComponent, UserHomeComponent, ViewCartComponent, AddReviewComponent, SelectedMovieComponent],
+  declarations: [BookMovieComponent, ViewTicketComponent, UserHomeComponent, ViewCartComponent, AddReviewComponent, SelectedMovieComponent, SeatsSelectionComponent],
   imports: [
     CommonModule,
     UserRoutingModule,ReactiveFormsModule,

@@ -1,51 +1,70 @@
+<button class="btn btn-primary" (click)="funFormatDate('2022-02-15')">format date btn </button> 
+
 
 <!-- {
-    "movieId": 1,
-    "title": "ddlj",
+    "movieId": 8,
+    "title": "indian",
     "description": "desc",
-    "releaseYear": "2020-12-04T06:10:20.821+00:00",
+    "releaseYear": "2022-01-11T12:52:21.974+00:00",
     "language": {
         "language_id": 1,
-        "name": "English",
+        "name": "Punjabi",
         "last_update": "2020-12-03T14:34:06"
     },
     "rating": 5,
-    "lastUpdate": "2020-12-04T11:40:20.8319291",
-    "startDate": "2020-12-04T11:40:20.8319291",
-    "endDate": "2020-12-04T11:40:20.8319291",
-    "lastUpdateTemp": "2020-12-04T06:10:20.821+00:00",
+    "lastUpdate": "2022-01-11T18:22:21.976563",
+    "startDate": "2022-01-11T18:22:21.976563",
+    "endDate": "2022-01-11T18:22:21.976563",
+    "lastUpdateTemp": "2022-01-11T12:52:21.974+00:00",
     "slot912": "slot912",
     "slot1215": null,
     "slot1518": null,
     "slot1821": null,
     "goldPrice": 500,
     "silverPrice": 250,
+    "categories": [
+        {
+            "categoryId": 1,
+            "name": "Thirller",
+            "lastUpdate": "2021-07-04T15:15:05"
+        },
+        {
+            "categoryId": 4,
+            "name": "Adventure",
+            "lastUpdate": "2021-07-04T15:16:09"
+        },
+        {
+            "categoryId": 5,
+            "name": "Adventure",
+            "lastUpdate": "2021-07-04T15:16:10"
+        }
+    ],
     "actors": [
         {
-            "actorId": 1,
-            "firstName": "rohan",
-            "lastUpdate": "2020-12-03T21:39:23",
+            "actorId": 6,
+            "firstName": "vijay",
+            "lastUpdate": "2021-07-04T15:14:21",
             "lastName": "kumar"
         },
         {
             "actorId": 2,
-            "firstName": "sohan",
-            "lastUpdate": "2020-12-03T21:40:09",
+            "firstName": "salman",
+            "lastUpdate": "2021-07-04T15:13:26",
             "lastName": "kumar"
         },
         {
             "actorId": 3,
-            "firstName": "mohan",
-            "lastUpdate": "2020-12-03T21:41:37",
+            "firstName": "ajay",
+            "lastUpdate": "2021-07-04T15:13:56",
             "lastName": "kumar"
         }
     ],
     "originalLanguage": true
 } -->
-<p>admin-add-movie works!</p>
-<button class="btn btn-primary" (click)="addMovie()">addmovie hardcode calling</button>
+<p>admin-add-movie works!</p> 
+<!-- <button class="btn btn-primary" (click)="addMovie()">addmovie hardcode calling</button> -->
 <div class="container">
-    <form class="form-horizontal" action="../AddMovie" method="get" role="form">
+    <form class="form-horizontal" [formGroup]="frmGrp" role="form" (ngSubmit)="frmSub()">
         <h2 class="text-info">Add Movie Form</h2>
         <div class="form-row">
         <div class="form-group col-md-12">
@@ -57,20 +76,28 @@
         </div>
         </div>
 
-
+<!-- ===================================== -->
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="movieName" class="text-info" >Movie Name</label>
             
-                <input type="text" id="txtMovieName" name="txtMovieName" placeholder="Movie Name" class="form-control" autofocus>
+                <input type="text" formControlName="title" placeholder="Movie Name" class="form-control" autofocus>
                 <span class="text-muted">Movie Name , eg.: Mission Impossible </span>
             
             </div>
 
             <div class="form-group col-md-6">
-                <label for="stars" class="text-info">Stars</label>
+                <label for="releaseYear" class="text-info">releaseYear</label>
+                <input type="date" formControlName="releaseYear" class="form-control"/>
+                   
+            </div>
+        </div>
+        <!-- ==================movieid titile release year=================== -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="rating" class="text-info">rating</label>
                 
-                    <select id="ddlStars" name="ddlStars" class="form-control">
+                    <select  formControlName="rating" class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -78,24 +105,53 @@
                         <option>5</option>
                         
                     </select>
+           </div>
+
+            <div class="form-group col-md-6">
+                <div formGroupName="language">
+
+                <label for="language_id" class="text-info">language_id</label>
                 
+                    <select  formControlName="language_id" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        
+                    </select>
+                </div>
             </div>
         </div>
-   
+        <!-- ========================================= -->
+        <div class="form-row">
+            <div class="form-group col-md-12">
+            <label for="movieName" class="text-info" >Description</label>
+            
+                <input type="text" formControlName="description" placeholder="Description Name" class="form-control" autofocus>
+                
+            
+            </div>
+
+        </div>
+
+        <!-- =================================== -->
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="birthDate" class="text-info">Start Date</label>
+                <label for="startDate" class="text-info">start date</label>
                 
-                    <input type="date" id="startDate" name="startDate" class="form-control">
+                    <input type="date" formControlName="startDate"  class="form-control">
                 
             </div>
             <div class="form-group col-md-6">
-                <label for="birthDate" class="text-info">End Date</label>
+                <label for="endDate" class="text-info">End Date</label>
                 
-                    <input type="date" id="endDate" name="endDate" class="form-control">
+                    <input type="date" formControlName="endDate" class="form-control">
                 
             </div>
         </div>
+        <!-- =moviid,title,desc,release year,lang, rating,stdat,enddet=========================================== -->
+       
           
         
         <div class="form-row">
@@ -104,24 +160,24 @@
             </div> 
                     <div class="form-group col-md-2" >
                         <label>
-                            <input type="checkbox" id="slot912" name="slot" value="slot912">9-12
+                            <input type="checkbox" formControlName="slot912" value="slot912">9-12
                         </label>
                     </div>
                     <div class="form-group col-md-2">
                         <label>
-                             <input type="checkbox" id="slot1215" name="slot" value="slot1215">12-15
+                             <input type="checkbox" formControlName="slot1215" value="slot1215">12-15
                         </label>
                     </div>
                 
                 
                     <div class="form-group col-md-2">
                         <label>
-                            <input type="checkbox" id="slot1518" name="slot" value="slot1518">15-18
+                            <input type="checkbox" formControlName="slot1518" value="slot1518">15-18
                         </label>
                     </div>
                     <div class="form-group col-md-2">
                         <label>
-                             <input type="checkbox" id="slot1821" name="slot" value="slot1821">18-21
+                             <input type="checkbox" formControlName="slot1821" value="slot1821">18-21
                         </label>
                     </div>
                 
@@ -130,40 +186,67 @@
         </div>
         
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
                 <label for="goldPrice" class="text-info">Gold Ticket Price in rs</label>
                 
-                <input type="number" id="txtGoldPrice" name="txtGoldPrice" placeholder="Gold Ticket Price" class="form-control" autofocus>
+                <input type="number" formControlName="goldPrice" placeholder="Gold Ticket Price" class="form-control" autofocus>
                     <span class="text-muted">Gold ticket price : ex 500 </span>
                 
             </div>
 
-            <div class="form-group col-md-4">
-                <label for="goldPrice" class="text-info">Silver Ticket Price in rs</label>
+            <div class="form-group col-md-6">
+                <label for="silverPrice" class="text-info">Silver Ticket Price in rs</label>
                 
-                <input type="number" id="txtSilverPrice" name="txtSilverPrice" placeholder="Silver Ticket Price"  class="form-control" autofocus>
+                <input type="number" formControlName="silverPrice" placeholder="Silver Ticket Price"  class="form-control" autofocus>
                 <span class="text-muted">Silver ticket price : ex 500 </span>
                 
             </div>
 
-            <div class="form-group col-md-4">
-                <label for="movieName" class="text-info">Language </label>
+            
+        </div>
+
+        <div class="form-row">
+            
+            <div class="form-group col-md-6">
+                <div formGroupName="actors">
+
+                <label for="actors" class="text-info">actors</label>
                 
-                <input type="text" id="txtLanguage" name="txtLanguage" placeholder="language" class="form-control" autofocus>
-                <span class="text-muted">English,Punjabi</span>
-                
+                    <select  formControlName="actorId" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        
+                    </select>
+                </div>
             </div>
 
+            <div class="form-group col-md-6">
+                <div formGroupName="categories">
+
+                <label for="categories" class="text-info">categories</label>
+                
+                    <select  formControlName="categoryId" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        
+                    </select>
+                </div>
+            </div>
         </div>
-   
    
         <div class="form-row">
      
         <div class="form-group col-md-12">
-            <label for="movieName" class="text-info">Image Name</label>
+            <label for="originalLanguage" class="text-info">originalLanguage</label>
             
-             <input type="text" id="txtImageName" name="txtImageName" placeholder="image Name" class="form-control" autofocus>
-             <span class="text-muted">a1.jpg </span>
+             <input type="text" formControlName="originalLanguage"  class="form-control" autofocus>
+             <span class="text-muted">true or false </span>
             
         </div>
         </div>
@@ -206,7 +289,7 @@
         <div class="form-row">
             <div class="form-group col-md-3">
             
-                <button type="submit" class="btn btn-primary ">add movie</button>               
+                <!-- <button type="submit" class="btn btn-primary ">add movie</button>                -->
             
             </div>
             <div class="form-group col-md-3">
