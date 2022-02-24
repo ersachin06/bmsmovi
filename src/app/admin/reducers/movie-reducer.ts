@@ -1,5 +1,5 @@
 import { Action } from '../actions';
-import { MOVIE_LIST_REQUEST, MOVIE_LIST_SUCCESS, UserListRequestAction } from '../actions/movie-action';
+import { MOVIE_LIST_REQUEST, MOVIE_LIST_SUCCESS, MovieListRequestAction } from '../actions/movie-action';
 import {Movie} from '../modal/Movie'
 export interface MovieReducerState
 {
@@ -26,7 +26,9 @@ export function MovieReducer(state=initialState,action:Action) :MovieReducerStat
         }
         case MOVIE_LIST_SUCCESS:
             {
-            const updateMovies=state.movies.concat(action.payload.data);
+                console.log("inside movie_list_success reducer ");
+           // const updateMovies=state.movies.concat(action.payload.data);
+           const updateMovies=action.payload.data;
             return {...state,loading:false,loaded:true,movies:updateMovies};//this is new state-only loading is updated not other parameters of state.
             }
             default: {

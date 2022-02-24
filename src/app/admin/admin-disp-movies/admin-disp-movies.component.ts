@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AdminServiceService } from '../services/admin-service.service';
 import {Movie} from '../modal/Movie';
 import { MatTableDataSource } from '@angular/material/table';
+import { Store } from '@ngrx/store';
+import { getMovieLoaded, getMovieLoading, getMovies, getMovieState, RootReducerState } from '../reducers';
+import { MovieListRequestAction, MovieListSuccessAction } from '../actions/movie-action';
+import { combineLatest } from 'rxjs';
+
 
 
 // const ELEMENT_DATA: Movie[]=[{
@@ -146,28 +151,50 @@ export class AdminDispMoviesComponent implements OnInit {
 // <th>silverPrice</th>
 // <th>originalLanguage</th>
 
-  displayedColumns: string[] = [ 'movieId','title','language','releaseYear','rating','slot912'];
+  displayedColumns: string[] = [ 'movieId','title','description','rating','startDate','endDate','language','releaseYear','rating','slot912','slot1215','slot1518','slot1821','goldPrice','silverPrice'];
   //dataSource= new MatTableDataSource(ELEMENT_DATA);
   dataSource:Movie[];
 
   arrMovies:Movie[]=[];
   
-  constructor(private adminService:AdminServiceService) { }
+  constructor(private adminService:AdminServiceService,private store:Store<RootReducerState>) { }
 
   ngOnInit(): void {
-   
-    this.adminService.getAllMovies().subscribe(res=>{
-      console.log("1");
-      console.log(res);
-      console.log("2");
-      let movieArr:Movie[]=res as Movie[];
-      console.log(movieArr[0].actors[0].actorId);
-      console.log(movieArr[0].actors[0].firstName);
-      console.log(movieArr[1]);
-      this.arrMovies=movieArr;
-      this.dataSource=movieArr;
+   const loading$=this.store.select(getMovieLoading);
+    const loaded$=this.store.select(getMovieLoaded);
+    const getMoviesData=this.store.select(getMovies);
+    console.log("init fired ");
+     combineLatest([loading$,loaded$]).subscribe((res)=>{
+       console.log("2");
+  //     
+        if(!res[0] && !res[1])
+        {
+          this.store.dispatch(new MovieListRequestAction())
+          this.adminService.getAllMovies().subscribe(dt=>{
+            console.log("88");
+            console.log(dt);
+            console.log("89");
+            let movieArr:Movie[]=dt as Movie[];
+            console.log(movieArr[0].actors[0].actorId);
+            console.log(movieArr[0].actors[0].firstName);
+            console.log(movieArr[1]);
+            this.arrMovies=movieArr;
+            this.dataSource=movieArr;
+            this.store.dispatch(new MovieListSuccessAction({data:movieArr}));
+          })
+       
+         }
+  //       console.log("2");
     })
-
+  //  // this.store.select(getMovies).subscribe
+  //   // this.store.select(getMovies).subscribe(data=>{
+  //   //   this.dataSource=data;
+  //   //   this.arrMovies=data
+  //   // })
+     getMoviesData.subscribe((dt1)=>{
+       this.arrMovies=dt1;
+       this.dataSource=dt1;
+     })
 
   }
 

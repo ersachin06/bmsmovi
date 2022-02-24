@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { StoreModule } from '@ngrx/store';
+import { rootReducer } from './admin/reducers';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,8 @@ import { StoreModule } from '@ngrx/store';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSliderModule
-   // StoreModule.forRoot({}, {})
+    MatSliderModule,
+    StoreModule.forRoot(rootReducer)
     // MatTableModule
   ],
   providers: [],
